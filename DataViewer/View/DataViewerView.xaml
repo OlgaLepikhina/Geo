@@ -1,0 +1,86 @@
+﻿<Window x:Class="Geo.DataViewerView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModel="clr-namespace:Geo" 
+        xmlns:local="clr-namespace:Geo"
+        mc:Ignorable="d"
+        Topmost="True"
+        Height="300"
+        Width="400"
+        Title="Geo" WindowStartupLocation="CenterScreen" >
+    <Window.DataContext>
+        <viewModel:DataViewerViewModel />
+    </Window.DataContext>
+    <Grid Width="290" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="18"/>
+            <RowDefinition Height="18"/>
+            <RowDefinition Height="18"/>
+            <RowDefinition Height="18"/>
+            <RowDefinition Height="18"/>
+            <RowDefinition Height="18"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Margin="0" Padding="0" Grid.Row="0" Grid.Column="0" Content="Номер:"/>
+        <Label Margin="0" Padding="0" Grid.Row="0" Grid.Column="1" Content="{Binding Number}"/>
+        <Label Margin="0" Padding="0" Grid.Row="1" Grid.Column="0" Content="Квартал:"/>
+        <Label Margin="0" Padding="0" Grid.Row="1" Grid.Column="1" Content="{Binding Kvartal}"/>
+        <Label Margin="0" Padding="0" Grid.Row="2" Grid.Column="0" Content="Площадь (га):"/>
+        <Label Margin="0" Padding="0" Grid.Row="2" Grid.Column="1" Content="{Binding Squere}"/>
+        <Label Margin="0" Padding="0" Grid.Row="3" Grid.Column="0"  Content="Преобладающая порода:"/>
+        <Label Margin="0" Padding="0" Grid.Row="3" Grid.Column="1" Content="{Binding Wood}"/>
+        <Label Margin="0" Padding="0" Grid.Row="4" Grid.Column="0"  Content="Бонитет:"/>
+        <Label Margin="0" Padding="0" Grid.Row="4" Grid.Column="1" Content="{Binding Bonnitet}"/>
+        <Label Margin="0" Padding="0" Grid.Row="5" Grid.Column="0"  Content="Вырубки 2031г:"/>
+        <Label Margin="0" Padding="0" Grid.Row="5" Grid.Column="1" Content="{Binding Virub}"/>
+        <Grid  Grid.Row="7" 
+               Grid.Column="0" 
+               Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Margin="0" Padding="0" Grid.Row="0" Grid.Column="1" Content="2011 г."/>
+            <Label Margin="0" Padding="0" Grid.Row="0" Grid.Column="2" Content="2021 г."/>
+            <Label Margin="0" Padding="0" Grid.Row="0" Grid.Column="3" Content="2031 г."/>
+
+            <Label Margin="0" Padding="0" Grid.Row="1" Grid.Column="0" Content="Возраст (лет):"/>
+            <Label Margin="0" Padding="0" Grid.Row="1" Grid.Column="1" Content="{Binding Age2011}"/>
+            <Label Margin="0" Padding="0" Grid.Row="1" Grid.Column="2" Content="{Binding Age2021}"/>
+            <Label Margin="0" Padding="0" Grid.Row="1" Grid.Column="3" Content="{Binding Age2031}"/>
+            <Label Margin="0" Padding="0" Grid.Row="2" Grid.Column="0" Content="Высота (м):"/>
+            <Label Margin="0" Padding="0" Grid.Row="2" Grid.Column="1" Content="{Binding Height2011}"/>
+            <Label Margin="0" Padding="0" Grid.Row="2" Grid.Column="2" Content="{Binding Нeight2021}"/>
+            <Label Margin="0" Padding="0" Grid.Row="2" Grid.Column="3" Content="{Binding Height2031}"/>
+            <Label Margin="0" Padding="0" Grid.Row="3" Grid.Column="0" Content="Диаметр (см):"/>
+            <Label Margin="0" Padding="0" Grid.Row="3" Grid.Column="1" Content="{Binding Diameter2011}"/>
+            <Label Margin="0" Padding="0" Grid.Row="3" Grid.Column="2" Content="{Binding Diameter2021}"/>
+            <Label Margin="0" Padding="0" Grid.Row="3" Grid.Column="3" Content="{Binding Diameter2031}"/>
+            <Label Margin="0" Padding="0" Grid.Row="4" Grid.Column="0" Content="Запас (1 га):"/>
+            <Label Margin="0" Padding="0" Grid.Row="4" Grid.Column="1" Content="{Binding StoreGa2011}"/>
+            <Label Margin="0" Padding="0" Grid.Row="4" Grid.Column="2" Content="{Binding StoreGa2021}"/>
+            <Label Margin="0" Padding="0" Grid.Row="4" Grid.Column="3" Content="{Binding StoreGa2031}"/>
+            <Label Margin="0" Padding="0" Grid.Row="5" Grid.Column="0" Content="Запас общий:"/>
+            <Label Margin="0" Padding="0" Grid.Row="5" Grid.Column="1" Content="{Binding Store2011}"/>
+            <Label Margin="0" Padding="0" Grid.Row="5" Grid.Column="2" Content="{Binding Store2021}"/>
+            <Label Margin="0" Padding="0" Grid.Row="5" Grid.Column="3" Content="{Binding Store2031}"/>
+        </Grid>
+    </Grid>
+</Window>

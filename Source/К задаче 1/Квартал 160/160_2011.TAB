@@ -1,0 +1,20 @@
+!table
+!version 1000
+!charset WindowsCyrillic
+
+Definition Table
+  Type NATIVE Charset "WindowsCyrillic"
+  Fields 8
+    номер Integer ;
+    квартал Integer ;
+    Площадь_га Decimal (20, 2) ;
+    преобладающая_порода Char (254) ;
+    возраст_лет Integer ;
+    высота_м Integer ;
+    диаметр_см Integer ;
+    бонитет Integer ;
+begin_metadata
+"\IsReadOnly" = "FALSE"
+"\MapInfo" = ""
+"\MapInfo\TableID" = "e31cdac1-1918-4492-b22e-87065472fd59"
+end_metadata
